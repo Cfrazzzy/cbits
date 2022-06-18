@@ -20,8 +20,11 @@ int main() {
     cout << "Enter mode: "<<"\n"<<"1: XOR"<<"\n"<<"2: BITSHIFT LEFT ENCRYPT"<<"\n"<<"INPUT: ";
     cin >> controller; 
     if (controller == 1) {
+        cout << "xor chars by character (less than 256): "; 
+        char shifter;
+        cin >> shifter;
         while (is.get(c)) {         // loop getting single characters
-            int y = xorbytes(c, 'b', '0');
+            int y = xorbytes(c, shifter, '0');
             my_file << char(y);
             //bitset<8> x(c);
             //cout <<x<<" number at: "<<i << "\n";
